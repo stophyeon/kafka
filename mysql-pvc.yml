@@ -26,6 +26,9 @@ spec:
       containers:
         - name: mysql
           image: mysql:8
+          args:
+            - --character-set-server=utf8mb4
+            - --collation-server=utf8mb4_general_ci
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: 12345678
